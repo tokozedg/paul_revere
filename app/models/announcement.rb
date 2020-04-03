@@ -8,6 +8,6 @@ class Announcement < ActiveRecord::Base
   end
 
   def to_cookie_key
-    "#{self.class.name.downcase}_#{created_at.iso8601}"
+    "#{self.class.name.downcase}_#{created_at.to_i}"
   end
 end
